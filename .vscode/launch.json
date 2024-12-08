@@ -8,14 +8,14 @@
       "type": "chrome",
       "request": "launch",
       "name": "Client: Chrome",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "url": "http://localhost:3000", // 브라우저를 통해 접근할 사이트, port
+      "webRoot": "${workspaceFolder}" // js파일을 찾기 위한 브레이킹포인트를 걸기 위한 루트 설정
     },{
       "type": "node",
       "request": "launch",
       "name": "Server: Node",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"], // dev:local로 변경
+      "runtimeArgs": ["run", "dev"], // run은 들어가야하고, 그 뒤에 있는건 package.json 스크립트
       "skipFiles": ["<node_internals>/**"]
     }
   ],  "compounds": [
